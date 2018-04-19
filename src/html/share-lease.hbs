@@ -1,0 +1,44 @@
+{{#> layout }}
+  <a href="/" class="dark-gray flex items-center link pl3 pt3">
+    <i class="bg-light-gray br-100 material-icons pa3">close</i>
+  </a>
+  <h1 class="center measure pb5 pt2 tc">
+    Start your lease negotiation for New Pacific Place with LeasePilot
+  </h1>
+  <div class="b--black-05 bg-light-gray bt center">
+    <form class="black-80 center mw6 pa4">
+      <div>
+        <label for="comment" class="db f4 mb3">
+          Message
+          <small id="comment-desc" class="black-60 db f6 mt2">
+            Tell the tenant counsel what you expect them to do. <a href="#" class="link underline black-80 hover-blue">More info.</a></small>
+        </label>
+        <textarea id="comment"
+          name="comment"
+          class="b--black-20 ba border-box br2 db  hover-black lh-copy mb2 measure pa2 w-100"
+          placeholder="e.g. Hi Tenant Counsel, Check out this lease for New Pacific Place. I would love to get your thoughts. Thanks!"
+          aria-describedby="comment-desc"></textarea>
+      </div>
+
+      <div class="mt4">
+        <label for="comment" class="db f4 mb3">
+          Opposing counsel’s email
+          <small id="comment-desc" class="black-60 db f6 mt2">
+            This is the person that will redline the document. <a href="#" class="link underline black-80 hover-blue">More info.</a></small>
+        </label>
+        <textarea id="comment"
+          name="comment"
+          class="b--black-20 ba border-box br2 db hover-black mb2 measure pa2 w-100" aria-describedby="comment-desc"></textarea>
+      </div>
+
+      <div class="mt3 flex items-center justify-end">
+        <a href="/" class="f6 link dim black db">Cancel</a>
+        <input
+          class="b--black ba bg-navy f6 grow input-reset ph3 pointer pv2 white"
+          type="submit"
+          value="Share">
+      </div>
+    </form>
+
+  </div>
+  {{/layout}}
