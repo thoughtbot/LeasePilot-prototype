@@ -2,10 +2,10 @@
   <a href="/" class="dark-gray flex items-center link pl3 pt3">
     <i class="bg-light-gray br-100 material-icons pa3">close</i>
   </a>
-  <h1 class="center measure pb5 pt2 tc">
+  <h1 class="center f2 lh-title mw7 normal pb5 pt2 tc">
     Start your lease negotiation for New Pacific Place with LeasePilot
   </h1>
-  <div class="b--black-05 bg-light-gray bt center">
+  <div class="b--black-05 bg-light-gray bt center pv4 vh-100">
     <form class="black-80 center mw6 pa4">
       <div>
         <label for="comment" class="db f4 mb3">
@@ -15,28 +15,37 @@
         </label>
         <textarea id="comment"
           name="comment"
-          class="b--black-20 ba border-box br2 db  hover-black lh-copy mb2 measure pa2 w-100"
+          class="b--black-20 ba border-box db f6 hover-black lh-copy mb2 pa3 w-100"
           placeholder="e.g. Hi Tenant Counsel, Check out this lease for New Pacific Place. I would love to get your thoughts. Thanks!"
+          rows="5"
           aria-describedby="comment-desc"></textarea>
       </div>
 
-      <div class="mt4">
+      <div class="mt5">
         <label for="comment" class="db f4 mb3">
           Opposing counsel’s email
           <small id="comment-desc" class="black-60 db f6 mt2">
-            This is the person that will redline the document. <a href="#" class="link underline black-80 hover-blue">More info.</a></small>
+            This is the person that will redline the document. <a href="#" class="black-80 hover-blue link underline">More info.</a></small>
         </label>
-        <textarea id="comment"
-          name="comment"
-          class="b--black-20 ba border-box br2 db hover-black mb2 measure pa2 w-100" aria-describedby="comment-desc"></textarea>
+        <input id="name"
+          class="b--black-20 ba db f6 input-reset mb2 pa3 w-100"
+          type="text"
+          placeholder="enter an email"
+          aria-describedby="name-desc">
       </div>
 
-      <div class="mt3 flex items-center justify-end">
+      <div class="flex items-baseline justify-end mt5">
         <a href="/" class="f6 link dim black db">Cancel</a>
-        <input
-          class="b--black ba bg-navy f6 grow input-reset ph3 pointer pv2 white"
-          type="submit"
-          value="Share">
+        <div class="flex flex-column ml6 pt3">
+          <input
+            class="b--black ba bg-navy f6 grow input-reset pa3 br2 pointer white"
+            type="submit"
+            value="Send">
+          <small class="mt3 tc lh-copy">
+            This will send a message to <strong>bart@ey.com</strong> and email you the lease as a
+            Word file (.docx)
+          </small>
+        </div>
       </div>
     </form>
 
