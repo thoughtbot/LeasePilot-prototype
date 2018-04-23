@@ -1,6 +1,8 @@
-# ||PROJECT||
-This project was generated with [Skapa](https://github.com/enatario/skapa.git).
+# LeasePilot Prototype
 
+A quick-and-dirty prototype backed by Tachyons. 
+
+This project was generated with [Skapa](https://github.com/enatario/skapa.git).
 
 ## Pre-reqs
 * [Node](https://nodejs.org/en/)
