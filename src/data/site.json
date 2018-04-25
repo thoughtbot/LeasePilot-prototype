@@ -1,0 +1,19 @@
+{
+  "pages": [
+    {
+      "page": "compare"
+    },
+    {
+      "page": "email"
+    },
+    {
+      "page": "view-lease"
+    },
+    {
+      "page": "share-lease"
+    },
+    {
+      "page": "tenant-login"
+    }
+  ]
+}

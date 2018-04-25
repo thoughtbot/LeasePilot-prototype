@@ -1,43 +1,9 @@
-{{#> layout }}
-
-  {{> _header}}
-  {{> _tabnav compare=false}}
-
-  <div class="bg-black-05 cf">
-    <article class="fl mw6 pa3 w-20">
-      <h1 class="f4 normal">Basic terms</h1>
-      <ul class="b--black-10 br2 f6 list ml0 pl0">
-        <li class="b--black-10 bb pv3">Tenant Information
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-        <li class="b--black-10 bb pv3">Existing Lease Information
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-        <li class="b--black-10 bb pv3">Extended Term Information
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-        <li class="b--black-10 bb pv3">Extended Term Rent
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-        <li class="b--black-10 bb pv3">Guaranties
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-        <li class="pv3">Miscellaneous
-          <i class="fr material-icon-small material-icons o-30">add</i>
-        </li>
-      </ul>
-    </article>
-    <div class="fl w-70 pa3">
-      <div class="bg-white center mw8 pa6">
-        {{> _lease }}
-      </div>
-    </div>
-    <div class="fl flex items-center justify-end pa3 w-10">
-      <i class="material-icons">chevron_left</i>
-      <i class="material-icons ph1">chat</i>
-      <small>(0)</small>
-    </div>
-  </div>
-
-
-  {{/layout}}
+{{#> layout}}
+  <ul>
+    {{#each site.pages}}
+      <li>
+        <a href="/{{page}}">{{page}}</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/ layout}}
