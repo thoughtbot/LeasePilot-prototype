@@ -6,7 +6,7 @@
     Start your lease negotiation for New Pacific Place with LeasePilot
   </h1>
   <div class="b--black-05 bg-near-white bt center pv4 vh-100">
-    <form action="/" class="black-80 center mw6 pa4">
+    <form action="/" class="black-80 center mw6 pa4" data-submit-form>
       <div class="relative">
         <label for="comment" class="db f4 mb3">
           Message
@@ -40,10 +40,12 @@
       <div class="flex items-baseline justify-end mt3">
         <a href="/" class="f6 link dim black db">Cancel</a>
         <div class="flex flex-column ml6 pt3">
-          <input
+          <button
             class="b--black ba bg-navy f6 grow input-reset pa3 br2 pointer white"
-            type="submit"
-            value="Send">
+            data-send-button
+            type="submit">
+            Send
+          </button>
           <small class="mt3 tc lh-copy">
             This will send a message to <strong>bart@ey.com</strong> and email you the lease as a
             Word file (.docx)
