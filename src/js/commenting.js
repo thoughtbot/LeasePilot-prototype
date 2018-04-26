@@ -64,8 +64,8 @@ Comments.positionModalNear = function(marker) {
 
   modal.css({
     position: "absolute",
-    top: offset.top - 35 + "px",
-    left: offset.left + width + 60 + "px"
+    top: offset.top + "px",
+    left: offset.left + width + 8 + "px"
   });
 };
 
@@ -77,7 +77,7 @@ Comments.setupSections = function() {
       section.wrap("<div class='commentable-section'></div>");
       section
         .parent(".commentable-section")
-        .append("<a class='commentable-section--marker'>+</a>");
+        .append("<a class='commentable-section--marker shadow-4 br2'> <i class='material-icons'>insert_comment</i> </a>");
     }
   });
 };

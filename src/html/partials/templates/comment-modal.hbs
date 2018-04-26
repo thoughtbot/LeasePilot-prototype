@@ -1,11 +1,11 @@
 <script id='comment-modal-template' type='text/template'>
-  <div class='comment-modal'>
-    <form>
-      <label>Comment</label>
-      <textarea></textarea>
-      <div class='modal-actions'>
-        <input type='submit' value='Save'>
-        <a class='close'>Cancel</a>
+  <div class='b--black-05 ba bg-white br1 comment-modal f6 pa3 shadow-4 z-999'>
+    <form class="flex flex-column">
+      <label class="pb2">Write a comment</label>
+      <textarea maxlength="500" rows="3" style="resize: vertical" class="pa1"></textarea>
+      <div class='flex items-center modal-actions pt2'>
+        <input class='bg-navy br2 flex-grow-1 order-1 pa2 white' type='submit' value='Save'>
+        <a class='close flex-grow-1 order-0 tc'>Cancel</a>
       </div>
     </form>
   </div>

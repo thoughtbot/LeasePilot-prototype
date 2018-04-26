@@ -1,65 +1,29 @@
 .commentable-section {
   position: relative;
 
-  &.highlight {
-    background-color: #fffcd2;
+  &.highlight,
+  &:hover {
+    background-color: $color-highlight;
   }
 
   .commentable-section--marker {
+    @include position(absolute, -0.125rem -3.25rem null null);
+    @include size(3rem);
     cursor: pointer;
-    color: #000;
-    font-weight: bold;
     display: block;
     opacity: 0;
-    width: 22px;
-    height: 22px;
+    padding: 0.75rem $spacing-small;
     text-align: center;
-    background-color: #ddd;
-    border-radius: 3px;
-    position: absolute;
-    right: -35px;
-    top: 0;
-
-    &:hover {
-      background-color: #bbb;
-    }
+    transform: scale(0);
+    transition: $transition-base;
   }
 
   &:hover .commentable-section--marker {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
 .comment-modal {
-  z-index: 10000;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 10px 20px;
-  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-
-  > form {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.comments-sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 364px;
-  height: 100%;
-  box-sizing: border-box;
-  padding-top: 120px;
-  padding: 120px 20px 20px 20px;
-}
-
-.lease-editor--commentable {
-  padding-right: 364px;
-  box-sizing: border-box;
-
-  .lease {
-    width: auto !important;
-  }
+  width: rem(240);
 }
