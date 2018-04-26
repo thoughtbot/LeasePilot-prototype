@@ -6,7 +6,7 @@ const timeOutTime = 3000;
 
 const isSent = () => {
   removeClass(sendBtn, "o-50");
-  sendBtn.innerHTML = `<i class="material-icons material-icon-small">check</i> Sent`;
+  sendBtn.innerHTML = `<i class="material-icons material-icon-small">check</i> Done`;
 };
 
 const isDone = () => {

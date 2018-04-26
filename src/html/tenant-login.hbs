@@ -6,7 +6,7 @@
     <h1 class="f2 fw5 lh-title pt3 tc">
       Verify your email to start negotiating with Rachel Bueller on LeasePilot
     </h1>
-    <form action="/view-lease" class="pt4">
+    <form action="/view-lease" class="pt4" data-submit-form>
       <fieldset class="bn cf ma0 pa0">
         <div class="b--black-10 ba cf">
           <label class="clip" for="email-address">Email Address</label>
@@ -16,10 +16,12 @@
             type="email"
             name="email-address"
             value="" id="email-address">
-          <input
+          <button
             class="bg-animate bg-navy bn br2-ns br--right-ns button-reset f5-l f6 fl hover-bg-black pointer pv3 tc w-20-l w-25-m w-100 white"
             type="submit"
-            value="Verify">
+            data-send-button >
+            Verify
+          </button>
         </div>
       </fieldset>
     </form>
