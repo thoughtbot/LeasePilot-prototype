@@ -24,6 +24,37 @@
   }
 }
 
-.comment-modal {
+.comment-modal,
+.floating-comment {
+  z-index: 10000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.2);
   width: rem(240);
+
+  > form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.comments-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 364px;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 120px;
+  padding: 120px 20px 20px 20px;
+}
+
+.lease-editor--commentable {
+  padding-right: 364px;
+  box-sizing: border-box;
+
+  .lease {
+    width: auto !important;
+  }
 }
