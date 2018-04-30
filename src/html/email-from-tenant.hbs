@@ -5,24 +5,25 @@
       <i class="material-icons material-icon-small">search</i>
       Search eMail
     </div>
-    <img src="https://ui-avatars.com/api/?name=Bart+Starr&background=fef9c7"
+    <img src="https://ui-avatars.com/api/?name=Rachel+Bueller"
       class="br-100 dib h2 ml2 w2"
       alt="avatar">
   </div>
+
   <div class="bg-black-05 flex-ns">
     <ul class="bg-white mr4 vh-100-ns w-30-ns">
       <h2 class="normal ph3 pv2">Inbox</h2>
       {{> _email-preview
-        class="bg-lightest-blue"
-        email="rachel@freshfields.com via LeasePilot"
-        subject="Rachel wants to work with you in LeasePilot"
-        excerpt="Rachel Bueller want to negotiate with you ..."
+        email="jason@cbre.com"
+        subject="Rachel, we need to talk about this deal"
+        excerpt="Hey Rachel – when you get back in the office ..."
       }}
 
       {{> _email-preview
-        email="jason@cbre.com"
-        subject="Re: 355 Boylston Street"
-        excerpt="Bart, we need to talk about this deal. Please give ..."
+        class="bg-lightest-blue"
+        email="rache@freshfields.com"
+        subject="Bart commented in LeasePilot"
+        excerpt="Rachel, here are my edits based on your first dra ..."
       }}
       {{> _email-preview
         email="harrison@shaws.com"
@@ -31,15 +32,17 @@
       }}
     </ul>
     <div class="center mw8">
-      <p class="f4 mv4">Rachel wants to work with you in LeasePilot</p>
+      <p class="f4 mv4">Bart commented in LeasePilot</p>
       <div class="bg-white pv4-ns ph5-ns">
         {{> _email-front-matter
-          ui-avatar-string="Rachel+Bueller"
-          email="Rachel Bueller via LeasePilot <negotiate@leasepilot.com>"
-          date="Thu 5/03/2018, 1:01PM"
-          to="me <bart@ey.com>"
+          ui-avatar-string="Bart+Starr&background=fef9c7"
+          email="Bart Starr via LeasePilot <negotiate@leasepilot.com>"
+          date="Thu 5/03/2018, 3:30PM"
+          to="me <rachel@freshfields.com>"
         }}
-        {{> _email-rachel-invites}}
+
+         {{> _email-barts-edits}}
+
       </div>
     </div>
   </div>

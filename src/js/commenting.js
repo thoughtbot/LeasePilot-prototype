@@ -84,7 +84,7 @@ Comments.setupMarkerEvents = function() {
   $(document).on("click", ".comment-modal .close", function(e) {
     $(e.currentTarget)
       .closest(".comment-modal")
-      .remove();
+      .remove(); 
     Comments.unhighlightCommentable();
   });
 };

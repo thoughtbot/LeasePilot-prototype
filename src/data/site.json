@@ -1,10 +1,15 @@
 {
+  "lease-name":  "v.1 New Pacific Place – Starbucks, Inc.",
+
   "pages": [
     {
       "page": "compare"
     },
     {
       "page": "email"
+    },
+    {
+      "page": "email-from-tenant"
     },
     {
       "page": "view-lease"
@@ -16,4 +21,5 @@
       "page": "tenant-login"
     }
   ]
+
 }
