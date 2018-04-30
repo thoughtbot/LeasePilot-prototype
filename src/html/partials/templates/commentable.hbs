@@ -1,0 +1,30 @@
+<script type="text/x-template" id="commentable-template">
+  <div>
+    <slot></slot>
+
+    <a
+      @click='openComments'
+      v-bind:class="{ 'has-comments': hasComments() }"
+      class="commentable-section--marker shadow-4 br2">
+      <i class='material-icons'>insert_comment</i>
+    </a>
+
+    <div v-if='showComments' class='b--black-05 ba bg-white br1 comment-modal f6 pa3 shadow-4 z-999'>
+      <div v-if="comments().length" class="mt2">
+        <div class="b mb3">Comments</div>
+        <div v-for="(comment, index) in comments()" class="pb3 mb3 bb b--light-gray">
+          \{{ comment }} - <a href="#" @click.prevent='removeComment(index)'>delete</a>
+        </div>
+      </div>
+
+      <form @submit.prevent='saveComment' class="flex flex-column" commentable-id="123">
+        <label class="pb2 b">Write a new comment</label>
+        <textarea v-model='body' maxlength="500" rows="3" style="resize: vertical" class="pa1"></textarea>
+        <div class='flex items-center modal-actions pt2'>
+          <input class='bg-navy br2 flex-grow-1 order-1 pa2 white' type='submit' value='Save'>
+          <a @click='closeComments' class='close flex-grow-1 order-0 tc'>Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</script>

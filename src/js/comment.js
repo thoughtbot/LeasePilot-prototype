@@ -1,3 +1,5 @@
+import CommentStore from "./comment_store.js";
+
 export default class Comment {
   constructor(commentableId, body) {
     this.body = body;
@@ -6,9 +8,10 @@ export default class Comment {
 
   save() {
     if (this.body === "") {
-      alert("Comment is empty");
+      return false;
     } else {
-      localStorage.setItem(`commentable-${this.commentableId}`, this.body);
+      new CommentStore(this.commentableId).add(this.body);
+      return true;
     }
   }
 }

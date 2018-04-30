@@ -8,30 +8,40 @@
 
   .commentable-section--marker {
     @include position(absolute, -0.125rem -3.25rem null null);
-    @include size(3rem);
+    @include size(2.5rem);
     cursor: pointer;
+    background: #fff;
     display: block;
     opacity: 0;
-    padding: 0.75rem $spacing-small;
+    padding: 0.5rem $spacing-small;
     text-align: center;
-    transform: scale(0.7);
+    transform: scale(0.8);
     transition: $transition-base;
+
+    &.has-comments {
+      opacity: 1;
+      background-color: #eee;
+    }
   }
 
   &:hover .commentable-section--marker {
+    z-index: 10;
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.comment-modal,
-.floating-comment {
+.comment-modal {
   z-index: 10000;
   background-color: #fff;
   border-radius: 5px;
   padding: 10px 20px;
   box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.2);
   width: rem(240);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -(rem(280));
 
   > form {
     display: flex;

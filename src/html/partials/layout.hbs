@@ -7,13 +7,12 @@
 <!--<![endif]-->
 
 <head>
-  {{> base/base-meta }} {{> base/base-head }} {{> templates/comment }}{{> templates/comment-modal }} {{> base/base-favicon
-  }}
-
+  {{> base/base-meta }} {{> base/base-head }} {{> base/base-favicon }}
 </head>
 
 <body class="avenir">
-  <main>
+  {{> templates/comment-modal }} {{> templates/commentable }} {{> templates/comment }} {{> templates/comment-marker }}
+  <main id="vue-app">
     {{> @partial-block }}
   </main>
   {{> base/base-js }}

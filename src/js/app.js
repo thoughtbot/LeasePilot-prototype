@@ -1,12 +1,21 @@
 import setPathCookie from "./utils/setPathCookie.js";
 import removeMobileHover from "./utils/removeMobileHover.js";
 import sendButtonMessage from "./sendButtonMessage.js";
-import commenting from "./commenting.js";
+import vueCommenting from "./vue-commenting.js";
+
+Vue.config.ignoredElements = [
+  "lease-var",
+  "building-variable",
+  "lease-attachment",
+  "crb",
+  "lease-start",
+  "lease-end"
+];
 
 removeMobileHover();
 setPathCookie();
 sendButtonMessage();
-commenting();
+new vueCommenting();
 
 // Add class to html if JS is loaded
 document.querySelector("html").classList.add("js-is-loaded");
