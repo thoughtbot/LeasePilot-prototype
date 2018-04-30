@@ -49,16 +49,19 @@ Comments.displayComment = function(commentable, commentBody) {
   var modalTemplate = _.template(
     document.getElementById("comment-template").innerHTML
   );
-  $("body").append(
-    modalTemplate({
-      body: commentBody,
-      commentableId: commentableId
-    })
-  );
+  if ($("floating-comment[floating-commentable-id]").length === 0) {
+    $("body").append(
+      modalTemplate({
+        body: commentBody,
+        commentableId: commentableId
+      })
+    );
+  }
 };
 
 Comments.setupSaveEvents = function() {
   $(document).on("submit", ".comment-modal form", function(e) {
+    e.preventDefault();
     Comments.saveComment(e.currentTarget);
   });
 };
@@ -69,6 +72,8 @@ Comments.saveComment = function(form) {
     .val();
   const commentableId = $(form).attr("commentable-id");
   new Comment(commentableId, body).save();
+  Comments.deleteCommentModals();
+  Comments.attachSavedComments();
 };
 
 Comments.setupMarkerEvents = function() {
@@ -90,7 +95,7 @@ Comments.unhighlightCommentable = function() {
 
 Comments.showModal = function(marker) {
   Comments.unhighlightCommentable();
-  Comments.deleteModalIfCreatedPreviously();
+  Comments.deleteCommentModals();
   Comments.createModal(marker);
   Comments.positionNear(marker);
   Comments.focusCommentModal();
@@ -117,7 +122,7 @@ Comments.createModal = function(marker) {
   $("body").append(modalTemplate({ id: commentableId }));
 };
 
-Comments.deleteModalIfCreatedPreviously = function() {
+Comments.deleteCommentModals = function() {
   $(".comment-modal").remove();
 };
 
