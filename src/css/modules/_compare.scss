@@ -1,10 +1,9 @@
-.m-compare {
-  background-image: linear-gradient(to top, gray, gray);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: 1px 100%;
-}
+$_compare-width: 50%;
 
 .m-compare__item {
-  flex: 1;
+  width: $_compare-width;
+}
+
+.m-compare__header.fixed {
+  width: calc(#{$_compare-width} - 2rem);
 }
