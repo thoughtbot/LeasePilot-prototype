@@ -3,6 +3,7 @@ import removeMobileHover from "./utils/removeMobileHover.js";
 import Commentable from "./commentable.js";
 import ShareForm from "./share-form.js";
 import VueApp from "./vue-app.js";
+import Vue from "vue";
 
 Vue.config.ignoredElements = [
   "lease-var",
