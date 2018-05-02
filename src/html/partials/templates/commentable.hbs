@@ -19,7 +19,7 @@
 
       <form @submit.prevent='saveComment' class="flex flex-column" commentable-id="123">
         <label class="pb2 b">Write a new comment</label>
-        <textarea v-model='body' maxlength="500" rows="3" style="resize: vertical" class="pa1"></textarea>
+        <textarea v-focus.lazy="true" v-model='body' maxlength="500" rows="3" style="resize: vertical" class="pa1"></textarea>
         <div class='flex items-center modal-actions pt2'>
           <input class='bg-navy br2 flex-grow-1 order-1 pa2 white' type='submit' value='Save'>
           <a @click='closeComments' class='close flex-grow-1 order-0 tc'>Cancel</a>
