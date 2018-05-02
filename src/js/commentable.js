@@ -4,6 +4,7 @@ import CommentStore from "./comment_store.js";
 Vue.component("commentable", {
   props: ["commentableId"],
   template: "#commentable-template",
+  mixins: [VueFocus.mixin],
   data: () => {
     return {
       showComments: false,
