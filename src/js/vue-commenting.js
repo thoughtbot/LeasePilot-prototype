@@ -1,7 +1,6 @@
 import $ from "jquery";
 import _ from "lodash";
-import Comment from "./comment.js";
-import CommentStore from "./comment_store.js";
+import Commentable from "./commentable.js";
 
 export default class VueCommenting {
   constructor() {
@@ -15,44 +14,9 @@ export default class VueCommenting {
   }
 
   setupVue() {
-    Vue.component("commentable", this.commentable());
+    Vue.component("commentable", Commentable);
 
     new Vue({ el: "#vue-app" });
-  }
-
-  commentable() {
-    return {
-      props: ["commentableId"],
-      template: "#commentable-template",
-      data: () => {
-        return {
-          showComments: false,
-          body: ""
-        };
-      },
-      methods: {
-        openComments: function() {
-          this.showComments = true;
-        },
-        closeComments: function() {
-          this.showComments = false;
-        },
-        saveComment: function() {
-          new Comment(this.commentableId, this.body).save();
-          this.body = "";
-        },
-        comments: function() {
-          return new CommentStore(this.commentableId).all();
-        },
-        removeComment: function(index) {
-          new CommentStore(this.commentableId).remove(index);
-          this.$forceUpdate();
-        },
-        hasComments: function() {
-          return this.comments().length;
-        }
-      }
-    };
   }
 
   setupSections() {
