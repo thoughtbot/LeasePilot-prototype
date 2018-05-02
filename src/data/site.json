@@ -1,28 +1,29 @@
 {
-  "lease-name":  "v.1 New Pacific Place – Starbucks, Inc.",
-
-  "pages": [
-    {
-      "page": "compare"
-    },
-    {
-      "page": "email"
-    },
-    {
-      "page": "email-from-tenant"
-    },
-    {
+  "lease-name": "v.1 New Pacific Place – Starbucks, Inc.",
+  "headers": [{
+    "title": "landlord",
+    "pages": [{
       "page": "view-lease"
-    },
-    {
+    }, {
       "page": "share-lease"
-    },
-    {
-      "page": "share-lease-back-to-landlord"
-    },
-    {
+    }, {
+      "page": "email"
+    }]
+  }, {
+    "title": "tenant",
+    "pages": [{
+      "page": "email"
+    }, {
       "page": "tenant-login"
-    }
-  ]
-
+    }, {
+      "page": "view-lease-tenant"
+    }, {
+      "page": "share-lease-back-to-landlord"
+    }]
+  }, {
+    "title": "landlord-diff",
+    "pages": [{
+      "page": "email-from-tenant"
+    }]
+  }]
 }
