@@ -2,7 +2,7 @@ import setPathCookie from "./utils/setPathCookie.js";
 import removeMobileHover from "./utils/removeMobileHover.js";
 import Commentable from "./commentable.js";
 import ShareForm from "./share-form.js";
-import vueCommenting from "./vue-commenting.js";
+import VueApp from "./vue-app.js";
 
 Vue.config.ignoredElements = [
   "lease-var",
@@ -15,7 +15,7 @@ Vue.config.ignoredElements = [
 
 removeMobileHover();
 setPathCookie();
-new vueCommenting();
+new VueApp();
 
 // Add class to html if JS is loaded
 document.querySelector("html").classList.add("js-is-loaded");

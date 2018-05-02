@@ -1,7 +1,7 @@
 import $ from "jquery";
 import _ from "lodash";
 
-export default class VueCommenting {
+export default class VueApp {
   constructor() {
     this.currentId = 1;
     this.setupSections();
