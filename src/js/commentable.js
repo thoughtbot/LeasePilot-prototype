@@ -1,7 +1,7 @@
 import Comment from "./comment.js";
 import CommentStore from "./comment_store.js";
 
-export default {
+Vue.component("commentable", {
   props: ["commentableId"],
   template: "#commentable-template",
   data: () => {
@@ -32,4 +32,4 @@ export default {
       return this.comments().length;
     }
   }
-};
+});

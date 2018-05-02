@@ -1,60 +1,51 @@
 {{#> layout }}
-  <a href="/view-lease" class="dark-gray flex items-center link pl3 pt3">
-    <i class="bg-light-gray br-100 material-icons pa3">close</i>
-  </a>
-  <h1 class="center f2 lh-title mw7 normal pb5 pt2 tc">
-    Start your lease negotiation for New Pacific Place with LeasePilot
-  </h1>
-  <div class="b--black-05 bg-near-white bt center pv4 vh-100">
-    <form action="/view-lease" class="black-80 center mw6 pa4" data-submit-form>
-      <div class="relative">
-        <label for="comment" class="db f4 mb3">
-          Message
-          <small id="comment-desc" class="black-60 db f6 mt2">
-            Tell the tenant counsel what you expect them to do. <a href="#" class="link underline black-80 hover-blue">More info.</a></small>
-        </label>
+<share-form inline-template>
+  <div>
+    <a href="/view-lease" class="dark-gray flex items-center link pl3 pt3">
+      <i class="bg-light-gray br-100 material-icons pa3">close</i>
+    </a>
+    <h1 class="center f2 lh-title mw7 normal pb5 pt2 tc">
+      Start your lease negotiation for New Pacific Place with LeasePilot
+    </h1>
+    <div class="b--black-05 bg-near-white bt center pv4 vh-100">
+      <form action="/view-lease" class="black-80 center mw6 pa4" @submit.prevent='submit'>
         <div class="relative">
           <img src="https://ui-avatars.com/api/?name=Rachel+Bueller" class="absolute br-100 dib h2 left--3 w2" alt="avatar">
-          <textarea id="comment"
-          name="comment"
-          class="b--black-20 ba border-box db f6 hover-black lh-copy mb2 pa3 w-100"
-          placeholder="e.g. Hi Tenant Counsel, Check out this lease for New Pacific Place. I would love to get your thoughts. Thanks!"
-          rows="5"
-          aria-describedby="comment-desc"></textarea>
+          <textarea id="comment" name="comment" class="b--black-20 ba border-box db f6 hover-black lh-copy mb2 pa3 w-100" placeholder="e.g. Hi Tenant Counsel, Check out this lease for New Pacific Place. I would love to get your thoughts. Thanks!"
+            rows="5" aria-describedby="comment-desc"></textarea>
           <small class="black-40 absolute right-1 bottom-1">500</small>
         </div>
-      </div>
 
-      <div class="mt4">
-        <label for="comment" class="db f4 mb3">
-          Opposing counsel’s email
-          <small id="comment-desc" class="black-60 db f6 mt2">
-            This is the person that will redline the document. <a href="#" class="black-80 hover-blue link underline">More info.</a></small>
-        </label>
-        <input id="name"
-          class="b--black-20 ba db f6 input-reset mb2 pa3 w-100"
-          type="email"
-          required
-          placeholder="enter an email"
-          aria-describedby="name-desc">
-      </div>
-
-      <div class="flex items-baseline justify-end mt3">
-        <a href="/view-lease" class="f6 link dim black db">Cancel</a>
-        <div class="flex flex-column ml6 pt3">
-          <button
-            class="b--black ba bg-navy f6 grow input-reset pa3 br2 pointer white"
-            data-send-button
-            type="submit">
-            Send
-          </button>
-          <small class="mt3 tc lh-copy">
-            This will send a message to <strong>bart@ey.com</strong> and email you the lease as a
-            Word file (.docx)
-          </small>
+        <div class="mt4">
+          <label for="comment" class="db f4 mb3">
+            Opposing counsel’s email
+            <small id="comment-desc" class="black-60 db f6 mt2">
+              This is the person that will redline the document.
+              <a href="#" class="black-80 hover-blue link underline">More info.</a>
+            </small>
+          </label>
+          <input id="name" class="b--black-20 ba db f6 input-reset mb2 pa3 w-100" type="email" required placeholder="enter an email"
+            aria-describedby="name-desc">
         </div>
-      </div>
-    </form>
 
+        <div class="flex items-baseline justify-end mt3">
+          <a href="/view-lease" class="f6 link dim black db">Cancel</a>
+          <div class="flex flex-column ml6 pt3">
+            <button class="b--black ba bg-navy f6 grow input-reset pa3 br2 pointer white" :class="{'o-50': isSending}">
+              <span v-if="isDone">
+                <i class="material-icons material-icon-small">check</i>
+                Done
+              </span>
+              <span v-else="!isDone">\{{ buttonText }}</span>
+            </button>
+            <small class="mt3 tc lh-copy">
+              This will send a message to
+              <strong>bart@ey.com</strong> and email you the lease as a Word file (.docx)
+            </small>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-  {{/layout}}
+</share-form>
+{{/layout}}

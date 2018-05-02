@@ -1,6 +1,5 @@
 import $ from "jquery";
 import _ from "lodash";
-import Commentable from "./commentable.js";
 
 export default class VueCommenting {
   constructor() {
@@ -14,8 +13,6 @@ export default class VueCommenting {
   }
 
   setupVue() {
-    Vue.component("commentable", Commentable);
-
     new Vue({ el: "#vue-app" });
   }
 

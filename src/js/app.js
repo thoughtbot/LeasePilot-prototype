@@ -1,6 +1,7 @@
 import setPathCookie from "./utils/setPathCookie.js";
 import removeMobileHover from "./utils/removeMobileHover.js";
-import sendButtonMessage from "./sendButtonMessage.js";
+import Commentable from "./commentable.js";
+import ShareForm from "./share-form.js";
 import vueCommenting from "./vue-commenting.js";
 
 Vue.config.ignoredElements = [
@@ -14,7 +15,6 @@ Vue.config.ignoredElements = [
 
 removeMobileHover();
 setPathCookie();
-sendButtonMessage();
 new vueCommenting();
 
 // Add class to html if JS is loaded
