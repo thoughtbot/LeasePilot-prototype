@@ -1,5 +1,6 @@
 import $ from "jquery";
 import _ from "lodash";
+import Vue from "vue";
 
 export default class VueApp {
   constructor() {

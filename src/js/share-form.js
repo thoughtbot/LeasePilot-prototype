@@ -1,3 +1,4 @@
+import Vue from "vue";
 const timeoutTime = 3000;
 
 Vue.component("share-form", {
