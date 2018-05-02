@@ -4,6 +4,7 @@ import Commentable from "./commentable.js";
 import ShareForm from "./share-form.js";
 import CompareHeader from "./compare-header";
 import VueApp from "./vue-app.js";
+import Vue from "vue";
 
 Vue.config.ignoredElements = [
   "lease-var",

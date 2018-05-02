@@ -1,10 +1,12 @@
 import Comment from "./comment.js";
 import CommentStore from "./comment_store.js";
+import { mixin as focusMixin } from "vue-focus";
+import Vue from "vue";
 
 Vue.component("commentable", {
   props: ["commentableId"],
   template: "#commentable-template",
-  mixins: [VueFocus.mixin],
+  mixins: [focusMixin],
   data: () => {
     return {
       showComments: false,
