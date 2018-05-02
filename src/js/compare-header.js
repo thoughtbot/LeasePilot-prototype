@@ -1,20 +1,20 @@
 import { select } from "./utils/dom";
-const compareContainer = select("[data-compare-container]");
 
 Vue.component("compare-header", {
   data: () => {
     return {
-      visibleOnPage: false
+      offscreen: false
     };
   },
   mounted: function() {
-    const containerTop = compareContainer.offsetTop;
-
     window.addEventListener("scroll", () => {
+      const compareContainer = select("[data-compare-container]");
+      const containerTop = compareContainer.offsetTop;
+
       if (window.pageYOffset >= containerTop) {
-        this.visibleOnPage = false;
+        this.offscreen = true;
       } else {
-        this.visibleOnPage = true;
+        this.offscreen = false;
       }
     });
   }
