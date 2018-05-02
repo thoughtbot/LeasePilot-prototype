@@ -2,6 +2,7 @@ import setPathCookie from "./utils/setPathCookie.js";
 import removeMobileHover from "./utils/removeMobileHover.js";
 import Commentable from "./commentable.js";
 import ShareForm from "./share-form.js";
+import CompareHeader from "./compare-header";
 import VueApp from "./vue-app.js";
 
 Vue.config.ignoredElements = [
