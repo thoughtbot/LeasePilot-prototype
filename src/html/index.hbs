@@ -1,9 +1,14 @@
 {{#> layout}}
-  <ul>
-    {{#each site.pages}}
-      <li>
-        <a href="/{{page}}">{{page}}</a>
-      </li>
+  <ul class="f3 pa6">
+    {{#each site.headers}}
+      <h2 class="mb2 pt2 ttc">{{title}}</h2>
+      <ul>
+        {{#each pages}}
+        <li>
+          <a href="/{{page}}" class="blue db fw2 link mb1 no-underline text underline-hover">{{page}}</a>
+        </li>
+        {{/each}}
+      </ul>
     {{/each}}
   </ul>
 {{/ layout}}
