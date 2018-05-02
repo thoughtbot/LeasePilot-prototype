@@ -18,6 +18,9 @@
       "page": "share-lease"
     },
     {
+      "page": "share-lease-back-to-landlord"
+    },
+    {
       "page": "tenant-login"
     }
   ]
