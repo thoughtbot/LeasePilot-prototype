@@ -4,7 +4,7 @@ import removeMobileHover from "./utils/removeMobileHover.js";
 // import ShareForm from "./share-form.js";
 // import CompareHeader from "./compare-header";
 // import VueApp from "./vue-app.js";
-import hoverBtns from "./hoverBtns"
+import diffActions from "./diff-actions"
 
 // Vue.config.ignoredElements = [
 //   "lease-var",
@@ -17,7 +17,7 @@ import hoverBtns from "./hoverBtns"
 
 removeMobileHover();
 setPathCookie();
-hoverBtns();
+diffActions();
 // new VueApp();
 
 // Add class to html if JS is loaded
