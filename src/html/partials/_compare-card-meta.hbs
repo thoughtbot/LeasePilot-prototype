@@ -1,5 +1,7 @@
 <div class="flex items-center justify-between">
-  <p class="f6 mv0">Request <strong>{{reviewed}}/72</strong></p>
-  <p class="f6 fw6 mv0" data-compare-result="request-{{num}}"></p>
-  <button class="br2 bn dn f6 fw6 navy self-center underline" type="button" data-compare-undo="request-{{num}}">Undo</button>
+  <p class="f6 mv0">Request
+    <strong>\{{changeNumber}}/72</strong>
+  </p>
+  <p v-if="!isNew()" class="f6 fw6 mv0">\{{ formattedStatus() }}</p>
+  <button @click="undo" v-if="!isNew()" class="br2 bn f6 fw6 navy self-center underline" type="button">Undo</button>
 </div>
