@@ -17,7 +17,7 @@ const hoverBtns = () => {
       })
 
       diffHover.addEventListener("mouseleave", () => {
-        
+
         if (hasClass(diffHover, "db")) {
           removeClass(diffHover, "db")
         }
