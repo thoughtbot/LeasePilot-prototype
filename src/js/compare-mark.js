@@ -7,6 +7,9 @@ Vue.component("compare-mark", {
     return { showMenu: false };
   },
   methods: {
+    notImplementedAlert: function() {
+      alert("This has not been implemented yet.");
+    },
     backgroundColor: function() {
       if (this.type === "addition") {
         return "bg-light-green";
