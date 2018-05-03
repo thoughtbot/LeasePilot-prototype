@@ -1,0 +1,11 @@
+<script type="text/x-template" id="comment-mark-template">
+  <span :class="backgroundColor()" class="dib relative" @mouseover='showMenu = true' @mouseout='showMenu = false'>
+    <slot></slot>
+
+    <div v-if='showMenu' class="b--black-10 ba bg-near-white pa3 w4 absolute z-max">
+      <button type="button" class="b--green bg-white br2 mb2 db dim f6 fw6 w-100 green mr2 pa2">✓ Accept</button>
+      <button type="button" class="b--red bg-white br2 mb2 db dim f6 fw6 w-100 red mr2 pa2">x Ignore</button>
+      <button type="button" class="b--navy bg-white br2 db dim f6 fw6 w-100 navy pa2">+ Replace</button>
+    </div>
+  </span>
+</script>

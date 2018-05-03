@@ -1,3 +1,4 @@
+import Vue from "vue";
 import { select } from "./utils/dom";
 
 Vue.component("compare-header", {
