@@ -1,0 +1,32 @@
+{{#> layout }} {{> _header}}
+
+<section class="center flex justify-between mt4">
+  <div class="bg-black-05 m-compare__item pa3">
+    <div class="bg-white center pa5">
+      {{> _lease }}
+    </div>
+  </div>
+
+
+  <div class="m-compare__item ph3 relative" data-compare-container>
+    {{> _compare-header num="1" reviewed="0" prev="" next="compare-ignore"}}
+
+    <div class="b--lightest-blue bt bw2 absolute w-90" style="top: 400px;" data-compare-card="request-1">
+      <div class="b--black-10 ba pa3 relative">
+        {{> _compare-card-meta num="1"}}
+
+        {{#diffColor "addition"}}
+          {{> _compare-card-copy num="1"}}
+        {{/diffColor}}
+
+      </div>
+
+      {{> _compare-card-actions num="1"}}
+    </div>
+
+
+  </div>
+</section>
+
+{{> _compare-action-hover-btns}}
+{{/ layout }}
