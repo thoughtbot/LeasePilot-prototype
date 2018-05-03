@@ -12,12 +12,16 @@
     {{> _compare-header num="2" reviewed="1" prev="/compare-accept" next="/compare-ignore"}}
 
     <compare-card change-number="2" inline-template>
-      <div :class="borderColor()" class="bt bw2 absolute w-90" style="top: 400px;">
+      <div :class="borderColor()" class="bt bw2 absolute w-90" style="top: 738px;">
         <div class="b--black-10 ba pa3 relative">
           {{> _compare-card-meta }}
 
           <div v-if="isNew()">
-            {{> _compare-card-copy }} {{> _compare-card-actions }}
+
+            <p class="georgia lh-copy dark-gray">
+            <span class="underline ml4">7.02 Tenant Electricity.</span> Tenant shall pay to Landlord, as Additional <compare-mark type="deletion">Rent: (a) Tenant’s pro rata share of</compare-mark> the costs of electricity used <compare-mark type="deletion">  on the floor on which any portion of the Premises are located if such portion of the Premises does not consist of the entire floor (consisting of</compare-mark> the <compare-mark type="deletion">20th Floor</compare-mark> Premises <compare-mark type="deletion">as of the Term Commencement Date); and (b)</compare-mark> the <compare-mark type="deletion">entire share of</compare-mark> the <compare-mark type="deletion">costs of electricity used</compare-mark> on the <compare-mark type="deletion">floor on which</compare-mark> any portion <compare-mark type="deletion">of</compare-mark> the <compare-mark type="deletion">Premises are located if such</compare-mark> portion of the Premises <compare-mark type="deletion">consists of the entire floor (consisting of the 21st Floor Premises as of</compare-mark> the <compare-mark type="deletion">Term Commencement Date),</compare-mark> in <compare-mark type="deletion">each case</span> in advance on the first day of each month or partial month of the Term, based on amounts estimated by Landlord from time to time for such electricity charges, subject to periodic reconciliations based on actual <compare-mark type="deletion">electricity usage</compare-mark> and utility rates for the space and period in question.
+            </p>
+            {{> _compare-card-actions }}
           </div>
         </div>
       </div>

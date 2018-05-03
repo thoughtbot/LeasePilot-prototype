@@ -12,12 +12,19 @@
     {{> _compare-header num="1" reviewed="0" prev="" next="/compare-ignore"}}
 
     <compare-card change-number="1" inline-template>
-      <div :class="borderColor()" class="bt bw2 absolute w-90" style="top: 400px;">
+      <div :class="borderColor()" class="bt bw2 absolute w-90" style="top: 625px;">
         <div class="b--black-10 ba pa3 relative">
           {{> _compare-card-meta }}
 
           <div v-if="isNew()">
-            {{> _compare-card-copy }} {{> _compare-card-actions }}
+            <div>
+              <p class="georgia lh-copy dark-gray">
+                <p class="georgia lh-copy dark-gray">
+                  <span class="underline ml4">7.01 Building Services.</span> Landlord shall furnish Tenant with the following services: (a) water for use in the Base Building <compare-mark type="addition">restrooms and any
+                  restrooms and kitchens located with the Premises;</compare-mark> (b) customary heat and air conditioning in season during Building Service <compare-mark type="addition">Hours for first class office
+                  buildings</compare-mark> in the <compare-mark type="addition">City of Boston</compare-mark>;</p>
+            </div>
+             {{> _compare-card-actions }}
           </div>
         </div>
       </div>
