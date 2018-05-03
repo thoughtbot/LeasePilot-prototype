@@ -1,8 +1,7 @@
 .commentable-section {
   position: relative;
 
-  &.highlight,
-  &:hover {
+  &.highlight {
     background-color: $color-highlight;
   }
 
